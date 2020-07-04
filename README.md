@@ -12,7 +12,7 @@ Spring 2.3 on Amazon Corretto
 ### Download this sample
 ```
 git clone https://github.com/a2-ito/spring-on-corretto.git
-cd spring-on-corretto
+cd spring-on-corretto/demo
 ```
 
 ### Build an image
@@ -25,8 +25,15 @@ mvn spring-boot:build-image
 docker run -it -p8080:8080 demo:0.0.1-SNAPSHOT
 ```
 
-## Create a original builder 
+## Create an original builder 
+
+You can create your own builder by editting this toml file.
 ```
+vi spring-on-corretto/builder.toml
+```
+
+```
+cd spring-on-corretto
 pack create-builder itotest/cnb-java-builder-tiny --builder-config builder.toml
 ```
 
