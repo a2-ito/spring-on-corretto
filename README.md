@@ -44,6 +44,13 @@ It seems we need to push an image to a publich registry to use it as a builder.
 https://medium.com/@srinivasan.surprise/unpack-cloud-native-buildpacks-9959b601424b
 
 ## Verification
+
+### build console logs
+```
+
+```
+
+### verify env variables
 ```
 $ curl localhost:8080/actuator/env | jq
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
