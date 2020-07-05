@@ -1,4 +1,4 @@
-# spring-on-corretto
+-# spring-on-corrett1
 
 Spring 2.3 on Amazon Corretto
 
@@ -47,7 +47,145 @@ https://medium.com/@srinivasan.surprise/unpack-cloud-native-buildpacks-9959b6014
 
 ### build console logs
 ```
-
+[INFO]
+[INFO] Results:
+[INFO]
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO]
+[INFO]
+[INFO] --- maven-jar-plugin:3.2.0:jar (default-jar) @ demo ---
+[INFO] Building jar: /home/vagrant/spring-on-corretto/demo/target/demo-0.0.1-SNAPSHOT.jar
+[INFO]
+[INFO] --- spring-boot-maven-plugin:2.3.1.RELEASE:repackage (repackage) @ demo ---
+[INFO] Replacing main artifact with repackaged archive
+[INFO]
+[INFO] <<< spring-boot-maven-plugin:2.3.1.RELEASE:build-image (default-cli) < package @ demo <<<
+[INFO]
+[INFO]
+[INFO] --- spring-boot-maven-plugin:2.3.1.RELEASE:build-image (default-cli) @ demo ---
+[INFO] Building image 'docker.io/library/demo:0.0.1-SNAPSHOT'
+[INFO]
+[INFO]  > Pulling builder image 'docker.io/a2ito/cnb-java-builder-tiny:latest' 0%
+[INFO]  > Pulling builder image 'docker.io/a2ito/cnb-java-builder-tiny:latest' 6%
+[INFO]  > Pulling builder image 'docker.io/a2ito/cnb-java-builder-tiny:latest' 12%
+[INFO]  > Pulling builder image 'docker.io/a2ito/cnb-java-builder-tiny:latest' 14%
+[INFO]  > Pulling builder image 'docker.io/a2ito/cnb-java-builder-tiny:latest' 18%
+[INFO]  > Pulling builder image 'docker.io/a2ito/cnb-java-builder-tiny:latest' 21%
+[INFO]  > Pulling builder image 'docker.io/a2ito/cnb-java-builder-tiny:latest' 23%
+[INFO]  > Pulling builder image 'docker.io/a2ito/cnb-java-builder-tiny:latest' 26%
+[INFO]  > Pulling builder image 'docker.io/a2ito/cnb-java-builder-tiny:latest' 30%
+[INFO]  > Pulling builder image 'docker.io/a2ito/cnb-java-builder-tiny:latest' 33%
+[INFO]  > Pulling builder image 'docker.io/a2ito/cnb-java-builder-tiny:latest' 38%
+[INFO]  > Pulling builder image 'docker.io/a2ito/cnb-java-builder-tiny:latest' 42%
+[INFO]  > Pulling builder image 'docker.io/a2ito/cnb-java-builder-tiny:latest' 47%
+[INFO]  > Pulling builder image 'docker.io/a2ito/cnb-java-builder-tiny:latest' 50%
+[INFO]  > Pulling builder image 'docker.io/a2ito/cnb-java-builder-tiny:latest' 52%
+[INFO]  > Pulling builder image 'docker.io/a2ito/cnb-java-builder-tiny:latest' 56%
+[INFO]  > Pulling builder image 'docker.io/a2ito/cnb-java-builder-tiny:latest' 63%
+[INFO]  > Pulling builder image 'docker.io/a2ito/cnb-java-builder-tiny:latest' 63%
+[INFO]  > Pulling builder image 'docker.io/a2ito/cnb-java-builder-tiny:latest' 100%
+[INFO]  > Pulled builder image 'a2ito/cnb-java-builder-tiny@sha256:8e2a627b6ee61b926546a4daebb0039027b49c1de34155f9635e41f110a8cb59'
+[INFO]  > Pulling run image 'docker.io/humourmind/cnb-run:tiny' 0%
+[INFO]  > Pulling run image 'docker.io/humourmind/cnb-run:tiny' 37%
+[INFO]  > Pulling run image 'docker.io/humourmind/cnb-run:tiny' 73%
+[INFO]  > Pulling run image 'docker.io/humourmind/cnb-run:tiny' 100%
+[INFO]  > Pulled run image 'humourmind/cnb-run@sha256:9e069f5c33818c2ddec99d16c7501a9775f005e5cb69072f8dc618d6120f5d46'
+[INFO]  > Executing lifecycle version v0.7.3
+[INFO]  > Using build cache volume 'pack-cache-5cbe5692dbc4.build'
+[INFO]
+[INFO]  > Running creator
+[INFO]     [creator]     ---> DETECTING
+[INFO]     [creator]     5 of 15 buildpacks participating
+[INFO]     [creator]     paketo-buildpacks/amazon-corretto 1.9.0
+[INFO]     [creator]     paketo-buildpacks/executable-jar  1.2.1
+[INFO]     [creator]     paketo-buildpacks/apache-tomcat   1.1.1
+[INFO]     [creator]     paketo-buildpacks/dist-zip        1.2.1
+[INFO]     [creator]     paketo-buildpacks/spring-boot     1.5.1
+[INFO]     [creator]     ---> ANALYZING
+[INFO]     [creator]     Previous image with name "docker.io/library/demo:0.0.1-SNAPSHOT" not found
+[INFO]     [creator]     ---> RESTORING
+[INFO]     [creator]     ---> BUILDING
+[INFO]     [creator]
+[INFO]     [creator]     Paketo Amazon Corretto Buildpack 1.9.0
+[INFO]     [creator]       https://github.com/paketo-buildpacks/amazon-corretto
+[INFO]     [creator]       Build Configuration:
+[INFO]     [creator]         $BP_JVM_VERSION              11.*            the Java version
+[INFO]     [creator]       Launch Configuration:
+[INFO]     [creator]         $BPL_JVM_HEAD_ROOM           0               the headroom in memory calculation
+[INFO]     [creator]         $BPL_JVM_LOADED_CLASS_COUNT  35% of classes  the number of loaded classes in memory calculation
+[INFO]     [creator]         $BPL_JVM_THREAD_COUNT        250             the number of threads in memory calculation
+[INFO]     [creator]       No valid JRE available, providing matching JDK instead. Using a JDK at runtime has security implications.
+[INFO]     [creator]       Corretto JDK 11.0.7: Contributing to layer
+[INFO]     [creator]         Downloading from https://corretto.aws/downloads/resources/11.0.7.10.1/amazon-corretto-11.0.7.10.1-linux-x64.tar.gz
+[INFO]     [creator]         Verifying checksum
+[INFO]     [creator]         Expanding to /layers/paketo-buildpacks_amazon-corretto/jre
+[INFO]     [creator]         Writing env.launch/JAVA_HOME.override
+[INFO]     [creator]         Writing env.launch/MALLOC_ARENA_MAX.override
+[INFO]     [creator]         Writing profile.d/active-processor-count.sh
+[INFO]     [creator]       Memory Calculator 4.0.0: Contributing to layer
+[INFO]     [creator]         Downloading from https://github.com/cloudfoundry/java-buildpack-memory-calculator/releases/download/v4.0.0/memory-calculator-4.0.0.tgz
+[INFO]     [creator]         Verifying checksum
+[INFO]     [creator]         Expanding to /layers/paketo-buildpacks_amazon-corretto/memory-calculator
+[INFO]     [creator]         Writing profile.d/memory-calculator.sh
+[INFO]     [creator]       Class Counter: Contributing to layer
+[INFO]     [creator]         Copying to /layers/paketo-buildpacks_amazon-corretto/class-counter
+[INFO]     [creator]       JVMKill Agent 1.16.0: Contributing to layer
+[INFO]     [creator]         Downloading from https://github.com/cloudfoundry/jvmkill/releases/download/v1.16.0.RELEASE/jvmkill-1.16.0-RELEASE.so
+[INFO]     [creator]         Verifying checksum
+[INFO]     [creator]         Copying to /layers/paketo-buildpacks_amazon-corretto/jvmkill
+[INFO]     [creator]         Writing env.launch/JAVA_OPTS.append
+[INFO]     [creator]       Link-Local DNS: Contributing to layer
+[INFO]     [creator]         Copying to /layers/paketo-buildpacks_amazon-corretto/link-local-dns
+[INFO]     [creator]         Writing profile.d/link-local-dns.sh
+[INFO]     [creator]       Java Security Properties: Contributing to layer
+[INFO]     [creator]         Writing env.launch/JAVA_OPTS.append
+[INFO]     [creator]         Writing env.launch/JAVA_SECURITY_PROPERTIES.override
+[INFO]     [creator]       Security Providers Configurer: Contributing to layer
+[INFO]     [creator]         Copying to /layers/paketo-buildpacks_amazon-corretto/security-providers-configurer
+[INFO]     [creator]         Writing profile.d/security-providers-classpath.sh
+[INFO]     [creator]         Writing profile.d/security-providers-configurer.sh
+[INFO]     [creator]       OpenSSL Certificate Loader: Contributing to layer
+[INFO]     [creator]         Copying to /layers/paketo-buildpacks_amazon-corretto/openssl-security-provider
+[INFO]     [creator]         Writing profile.d/openssl-certificate-loader.sh
+[INFO]     [creator]
+[INFO]     [creator]     Paketo Executable JAR Buildpack 1.2.1
+[INFO]     [creator]         Writing env/CLASSPATH
+[INFO]     [creator]       Process types:
+[INFO]     [creator]         executable-jar: java -cp "${CLASSPATH}" ${JAVA_OPTS} org.springframework.boot.loader.JarLauncher
+[INFO]     [creator]         task:           java -cp "${CLASSPATH}" ${JAVA_OPTS} org.springframework.boot.loader.JarLauncher
+[INFO]     [creator]         web:            java -cp "${CLASSPATH}" ${JAVA_OPTS} org.springframework.boot.loader.JarLauncher
+[INFO]     [creator]
+[INFO]     [creator]     Paketo Spring Boot Buildpack 1.5.1
+[INFO]     [creator]       Image labels:
+[INFO]     [creator]         org.opencontainers.image.title
+[INFO]     [creator]         org.opencontainers.image.version
+[INFO]     [creator]         org.springframework.boot.spring-configuration-metadata.json
+[INFO]     [creator]         org.springframework.boot.version
+[INFO]     [creator]     ---> EXPORTING
+[INFO]     [creator]     Adding layer 'launcher'
+[INFO]     [creator]     Adding layer 'paketo-buildpacks/amazon-corretto:class-counter'
+[INFO]     [creator]     Adding layer 'paketo-buildpacks/amazon-corretto:java-security-properties'
+[INFO]     [creator]     Adding layer 'paketo-buildpacks/amazon-corretto:jre'
+[INFO]     [creator]     Adding layer 'paketo-buildpacks/amazon-corretto:jvmkill'
+[INFO]     [creator]     Adding layer 'paketo-buildpacks/amazon-corretto:link-local-dns'
+[INFO]     [creator]     Adding layer 'paketo-buildpacks/amazon-corretto:memory-calculator'
+[INFO]     [creator]     Adding layer 'paketo-buildpacks/amazon-corretto:openssl-security-provider'
+[INFO]     [creator]     Adding layer 'paketo-buildpacks/amazon-corretto:security-providers-configurer'
+[INFO]     [creator]     Adding layer 'paketo-buildpacks/executable-jar:class-path'
+[INFO]     [creator]     Adding 1/1 app layer(s)
+[INFO]     [creator]     Adding layer 'config'
+[INFO]     [creator]     *** Images (6f0ee7327060):
+[INFO]     [creator]           docker.io/library/demo:0.0.1-SNAPSHOT
+[INFO]     [creator]     Adding cache layer 'paketo-buildpacks/executable-jar:class-path'
+[INFO]
+[INFO] Successfully built image 'docker.io/library/demo:0.0.1-SNAPSHOT'
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  03:13 min
+[INFO] Finished at: 2020-07-05T02:47:27Z
+[INFO] ------------------------------------------------------------------------
 ```
 
 ### verify env variables
