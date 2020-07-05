@@ -1,4 +1,4 @@
-# spring-on-corrett1
+# spring-on-corretto
 
 Spring 2.3 Build Docker images with Cloud Native Buildpacks with Amazon Corretto
 
