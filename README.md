@@ -1,6 +1,6 @@
--# spring-on-corrett1
+# spring-on-corrett1
 
-Spring 2.3 on Amazon Corretto
+Spring 2.3 Build Docker images with Cloud Native Buildpacks with Amazon Corretto
 
 ## Prerequisite
 
@@ -38,7 +38,7 @@ pack create-builder itotest/cnb-java-builder-tiny --builder-config builder.toml
 ```
 
 Push a built image to a public docker registry where you want.
-It seems we need to push an image to a publich registry to use it as a builder.
+It seems we need to push an image to a public registry to use it as a builder when a builder is specified.
 
 ## Reference
 https://medium.com/@srinivasan.surprise/unpack-cloud-native-buildpacks-9959b601424b
